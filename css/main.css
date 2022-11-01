@@ -339,6 +339,9 @@ input[type="email"]:invalid {
   box-shadow: none;
   outline: none;
 }
+input[type="text"].blur:required:invalid {
+  border-color: #fe7777;
+}
 input[type="text"].blur:required:invalid + label,
 input[type="email"].blur:required:invalid + label {
   color: #FF7777;
@@ -445,7 +448,7 @@ input[type="email"].blur:required:invalid + label {
   color: #333333;
 }
 
-.understand-section .row button {
+.understand-section .row button, .seconday-btn {
   border: 2px solid #5bc8af;
   border-radius: 4px;
   font-style: normal;
@@ -696,6 +699,16 @@ input[type="email"].blur:required:invalid + label {
       text-align: center;
       justify-content: center;
       border-radius: 5px;
+   }
+   .thankyou-container .seconday-btn{
+    display: block;
+    text-decoration: none;
+    line-height: 48px;
+    margin: 20px auto;
+   }
+
+   .thankyou-container:hover {
+    color: #5bc8af;
    }
    .checkmark {
     width: 35px;

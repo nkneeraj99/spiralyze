@@ -35,6 +35,7 @@ $(function () {
     }
 
     if ($("#country-selector").val()) {
+      $(".custom-error").hide();
       return true;
     } else {
       $(".custom-error").show();
@@ -80,7 +81,9 @@ function next(elem) {
   return elem;
 }
 
-// function redirectToThankYou(e) {
-//   e.preventDefault();
-//   location.href = "../thankyou.html";
-// }
+$('#samplevideo').on('shown.bs.modal', function () {
+  $('#video1')[0].play();
+})
+$('#samplevideo').on('hidden.bs.modal', function () {
+  $('#video1')[0].pause();
+})
