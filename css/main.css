@@ -253,7 +253,7 @@ header .cover-section {
   border-top-left-radius: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   header {
     height: 100%;
     max-height: 100%;
@@ -263,6 +263,40 @@ header .cover-section {
     height: 100%;
     padding-bottom: 100px;
   }
+  .cover-section h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .cover-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 70px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .form-container {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .cover-section h1 {
     font-style: normal;
     font-weight: 700;
@@ -283,6 +317,10 @@ header .cover-section {
 
   .navbar-toggler:focus {
     box-shadow: none;
+  }
+
+  .form-container {
+    margin: 0 auto;
   }
 }
 
@@ -335,6 +373,15 @@ header .cover-section {
 .understand-section img {
   border-radius: 8px;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .understand-section {
+    background: #fff;
+  }
+  .understand-section .row:nth-of-type(1) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -414,6 +461,16 @@ header .cover-section {
   padding: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .organize-section .organize-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .organize-section .organize-list li a {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .organize-section .organize-list {
     grid-template-columns: auto;
@@ -453,6 +510,10 @@ header .cover-section {
 
 .watch-video .right-section {
   position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .watch-video .left-section {
@@ -516,6 +577,46 @@ header .cover-section {
   line-height: 28px;
   color: rgba(255, 255, 255, 0.8);
   margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .watch-video {
+    background-position: bottom;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 60%;
+  }
+
+  .watch-video > ul:nth-of-type(1) {
+    display: block;
+  }
+
+  .watch-video .left-section ul {
+    margin: 0;
+    padding: 80px 35px;
+    max-width: 100%;
+  }
+
+  .watch-video .left-section {
+    background: url("../img/watch-video-ipad-curve.png");
+    background-size: contain;
+  }
+
+  .watch-video .left-section::before {
+    content: "";
+    background: url("../img/Rectangle.png") center no-repeat;
+    position: absolute;
+    left: 0;
+    height: 90vw;
+    z-index: -1;
+    transform: rotate(96deg) scale(1.5);
+    top: -50%;
+  }
+
+  .watch-video .right-section {
+    margin-top: -100px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -594,6 +695,9 @@ header .cover-section {
   }
 }
 
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
 footer {
   background: #eaeaea;
   padding: 38px;
@@ -625,6 +729,26 @@ footer .footer-links li a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 34px 32px;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  footer .footer-links {
+    margin: 18px 0px;
+    justify-content: center;
+  }
+
+  footer .footer-links li {
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   footer {
     padding: 34px 32px;
@@ -644,6 +768,10 @@ footer .footer-links li a {
     margin-right: 10px;
   }
 }
+
+/* ==========================================================================
+   Slider Styles
+   ========================================================================== */
 
 .testimonial {
   margin-top: -50px;
@@ -721,6 +849,26 @@ footer .footer-links li a {
   color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonial-slider figure img {
+    max-width: 198px;
+    height: 198px;
+  }
+
+  .testimonial-slider figure figcaption p {
+    font-size: 14px;
+  }
+
+  .testimonial-slider figure figcaption {
+    padding: 13px 30px;
+    margin-left: 26px;
+  }
+
+  .testimonial-slider figure figcaption h4 {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .testimonial-slider figure {
     display: block;
@@ -735,5 +883,71 @@ footer .footer-links li a {
     margin-left: 0;
     padding: 130px 32px 72px 32px;
     margin-top: -130px;
+  }
+}
+
+.modal-dialog {
+  max-width: calc(100% - 130px);
+  background-color: #000;
+}
+
+.modal-dialog video {
+  /* height: 1000vh; */
+  height: 100%;
+  width: 100%;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-content {
+  background-color: #000;
+}
+
+/* Helper classes */
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
   }
 }
