@@ -819,8 +819,14 @@ input[type="email"].blur:required:invalid + label {
     height: 100%;
     position: relative;
     z-index: 1;
-    padding-bottom: 100%;
+    padding-bottom: 46%;
   }
+
+
+  .watch-video .left-section {
+    background-size: cover;
+  }
+
 
   .watch-video > ul:nth-of-type(1) {
     display: block;
@@ -834,6 +840,7 @@ input[type="email"].blur:required:invalid + label {
   .left-section ul li:nth-of-type(1) h3 {
     text-align: center;
     font-style: normal;
+    display: inherit;
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
@@ -849,10 +856,15 @@ input[type="email"].blur:required:invalid + label {
 
   .left-section ul li h3 {
     font-style: normal;
+    display: grid;
+    grid-template-columns: 8% 92%;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
+  }
+  .watch-video .left-section::before {
+    content: none;
   }
 }
 
