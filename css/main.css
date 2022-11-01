@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Author's custom styles
+  custom styles
    ========================================================================== */
 :root {
   --primary-color: #297c6b;
@@ -136,7 +136,8 @@ header .cover-section {
   background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
-  padding: 51px 28px 56px 28px;
+  /* padding: 51px 28px 56px 28px; */
+  padding: 50px 28px 30px 28px;
   text-align: center;
   max-width: 472px;
   width: 100%;
@@ -163,7 +164,11 @@ header .cover-section {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
-  margin-top: 25px;
+  margin: 20px auto;
+}
+
+.form-container .form-group.focused span {
+  display: none!important;
 }
 
 .form-container button img {
@@ -188,6 +193,11 @@ header .cover-section {
   background-color: transparent;
   height: 48px;
   border-radius: 2px;
+  color: #fff;
+}
+
+.form-container .form-control:focus {
+  border-color: #fff;
 }
 
 .has-float-label {
@@ -251,6 +261,88 @@ header .cover-section {
 .input-group .has-float-label:not(:first-child) .form-control {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+
+.hide-text, label, button {
+  display: block;
+  overflow: hidden;
+}
+
+fieldset {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  /* width: 200px; */
+  padding: 16px 16px 8px 16px;
+  border: 0;
+}
+
+.custom-error {
+  display: none;
+}
+
+label[data-icon]:after,
+button[data-icon]:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+}
+
+label {
+  -moz-border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  cursor: pointer;
+}
+
+input[type="text"] + label + span,
+input[type="email"] + label + span, .custom-error {
+  display: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  position: absolute;
+  margin-top: 45px;
+  padding: 0 10px;
+  max-width: 88%;
+  z-index: 4;
+  height: 40px;
+  padding-top: 5px;
+  line-height: 14px;
+  color: #ffffff;
+  background: #FF7777;
+  border: 0;
+  left:6%;
+  font-size: 12px;
+}
+input[type="text"] + label + span:before,
+input[type="email"] + label + span:before , .custom-error::before{
+  width: 0;
+  height: 0;
+  left: 45%;
+  top: -14px;
+  content: '';
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #FF7777 transparent;
+}
+input[type="text"]:invalid,
+input[type="email"]:invalid {
+  display: block;
+  box-shadow: none;
+  outline: none;
+}
+input[type="text"].blur:required:invalid + label,
+input[type="email"].blur:required:invalid + label {
+  color: #FF7777;
+  border-right-color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
@@ -518,6 +610,80 @@ header .cover-section {
   margin-left: 30px;
 }
 
+
+/* ==========================================================================
+   Thankyou page Styles
+   ========================================================================== */
+
+   .thankyou-wrap {
+      background: linear-gradient(rgb(25 77 68 / 70%), rgb(25 77 68 / 70%)), url(../img/cover-img.png) center repeat;
+      background-size: cover;
+      max-height: 650px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      max-width: 70%;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+   }
+   .checkmark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 5px auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    padding: 0;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive styles
+   ========================================================================== */
+
 @media screen and (max-width: 600px) {
   .watch-video {
     background-position: bottom;
@@ -737,3 +903,4 @@ footer .footer-links li a {
     margin-top: -130px;
   }
 }
+

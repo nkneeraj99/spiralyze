@@ -96,9 +96,11 @@
                 as possible.
               </p>
             </div>
+            <!-- <a href="thankyou.html">Visit</a> -->
 
             <div class="col-lg-6">
-              <form action="" class="form-container">
+              <form action="thankyou.html" class="form-container">
+                <fieldset>
                 <div class="mb-3">
                   <h3>Contact Us</h3>
                 </div>
@@ -110,8 +112,8 @@
                         <input
                           type="text"
                           placeholder="First Name"
-                          class="form-control"
-                          id="first-name"
+                          class="form-control" name="first-name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$" data-validation-msg="First Name must be 2 - 12 characters"
+                          id="first-name" required
                         />
                         <label for="first-name">First Name</label>
                       </div>
@@ -121,8 +123,8 @@
                         <input
                           type="text"
                           placeholder="Last Name"
-                          class="form-control"
-                          id="last-name"
+                          class="form-control" name="last-name"
+                          id="last-name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$" data-validation-msg="Last Name must be 2 - 12 characters" required
                         />
                         <label for="last-name">Last Name</label>
                       </div>
@@ -137,8 +139,8 @@
                         <input
                           type="text"
                           placeholder="Business Email"
-                          class="form-control"
-                          id="business-email"
+                          class="form-control" name="business-email"
+                          id="business-email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" data-validation-msg="Please Enter valid email" required
                         />
                         <label for="business-email">Business Email</label>
                       </div>
@@ -148,8 +150,8 @@
                         <input
                           type="text"
                           placeholder="Company"
-                          class="form-control"
-                          id="company"
+                          class="form-control" name="company" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$" data-validation-msg="Company Name must be 2 - 12 characters"
+                          id="company" required
                         />
                         <label for="company">Company</label>
                       </div>
@@ -158,25 +160,27 @@
                 </div>
                 <div class="mb-3">
                   <div class="row">
-                    <div class="col-lg-12">
-                      <select name="" id="">
+                    <div class="col-lg-12 position-relative">
+                      <select name="" id="country-selector" required>
                         <option value="">Select Country</option>
-                        <option value="">India</option>
-                        <option value="">USA</option>
-                        <option value="">Germany</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
                       </select>
+                      <span class="custom-error">Please choose one option from Country</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-12">
-                    <button>
+                    <button type="submit" class="submit-btn">
                       <img src="img/send-icon.png" alt="send icon" />&nbsp;
                       Submit
                     </button>
                   </div>
                 </div>
+                </fieldset>
               </form>
             </div>
           </div>
