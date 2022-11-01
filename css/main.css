@@ -151,7 +151,7 @@ header .cover-section {
   color: #ffffff;
 }
 
-.form-container button {
+.form-container button, .primary-btn {
   background: #5bc8af;
   box-shadow: 0px 4px 6px rgb(0 0 0 / 8%);
   border-radius: 4px;
@@ -677,17 +677,25 @@ input[type="email"].blur:required:invalid + label {
    Thankyou page Styles
    ========================================================================== */
 
+   .thankyou-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+   }
    .thankyou-wrap {
-      background: linear-gradient(rgb(25 77 68 / 70%), rgb(25 77 68 / 70%)), url(../img/cover-img.png) center repeat;
+      /* background: linear-gradient(rgb(25 77 68 / 70%), rgb(25 77 68 / 70%)), url(../img/cover-img.png) center repeat; */
+      background: #fff;
       background-size: cover;
       max-height: 650px;
-      color: #fff;
+      color: #333333;
       display: flex;
       align-items: center;
       max-width: 70%;
       margin: 0 auto;
       text-align: center;
       justify-content: center;
+      border-radius: 5px;
    }
    .checkmark {
     width: 35px;
@@ -698,7 +706,7 @@ input[type="email"].blur:required:invalid + label {
     stroke: #fff;
     stroke-miterlimit: 10;
     margin: 5px auto;
-    box-shadow: inset 0px 0px 0px #7ac142;
+    box-shadow: inset 0px 0px 0px #5BC8AF;
     padding: 0;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
 }
@@ -708,7 +716,7 @@ input[type="email"].blur:required:invalid + label {
   stroke-dashoffset: 166;
   stroke-width: 2;
   stroke-miterlimit: 10;
-  stroke: #7ac142;
+  stroke: #5BC8AF;
   fill: none;
   animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
@@ -737,7 +745,7 @@ input[type="email"].blur:required:invalid + label {
 
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #7ac142;
+        box-shadow: inset 0px 0px 0px 30px #5BC8AF;
     }
 }
 
