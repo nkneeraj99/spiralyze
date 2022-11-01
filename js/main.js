@@ -14,7 +14,6 @@ $(function () {
     form = document.getElementsByTagName("form")[0];
 
   // Let's hide the default validation msg as
-  // -webkit-validation-bubble no longer works in Chrome 28+. Booooooo!
   form.addEventListener(
     "invalid",
     function (e) {
@@ -52,7 +51,6 @@ $(function () {
       inputMsg = document.createElement("span");
       inputMsg.innerHTML = inputValidationMsg;
 
-      // Add our own validation msg element so we can style it
       label.parentNode.insertBefore(inputMsg, label.nextSibling);
 
       input.onblur = function (e) {
@@ -73,7 +71,6 @@ $(function () {
   });
 });
 
-// Credit to John Resig for this function taken from Pro JavaScript techniques
 function next(elem) {
   do {
     elem = elem.nextSibling;
