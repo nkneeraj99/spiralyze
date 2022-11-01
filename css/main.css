@@ -95,6 +95,7 @@ header .cover-section {
   background-image: url("../img/Group-53.png"), url("../img/Rectangle-2.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 }
 
 .cover-section p {
@@ -557,6 +558,39 @@ header .cover-section {
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .watch-video .left-section::before {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .watch-video .left-section::before {
+    width: 102%;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .watch-video .left-section::before {
+    width: 91%;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .watch-video {
+    background-size: 65%;
+  }
+
+  .watch-video .left-section {
+    background-size: 85%;
+    width: 95%;
+  }
+
+  .watch-video .left-section::before {
+    width: 100%;
   }
 }
 
