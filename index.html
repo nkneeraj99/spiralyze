@@ -204,12 +204,14 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h2><span class="stroked-text" data-string="WE">WE</span> UNDERSTAND</h2>
+            <h2>
+              <span class="stroked-text" data-string="WE">WE</span> UNDERSTAND
+            </h2>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <p>
               Older adults want to play active and meaningful roles in their
               lives, including as part of a social network, a neighborhood, and
@@ -219,7 +221,7 @@
               important.
             </p>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <p>
               Older adults want to stay active and contribute to society in a
               reciprocal manner (meaning that they want to exchange their
@@ -229,7 +231,7 @@
               adults were eligible for inclusion.
             </p>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <p>
               To stimulate social contacts, neighborhood initiatives can be
               developed. Social meeting places, such as pubs and churches can
@@ -237,6 +239,14 @@
               relationships.
             </p>
 
+            <div class="hidden-xs hidden-sm visible-lg">
+              <button>
+                92% Success Rate &nbsp;<img src="img/arrow-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 hidden-lg visible-xs">
             <button>
               92% Success Rate &nbsp;<img src="img/arrow-icon.png" alt="" />
             </button>
@@ -351,7 +361,8 @@
         <div class="row">
           <div class="col-lg-12">
             <h2>
-              <span class="stroked-text" data-string="WE">WE</span> CAN ORGANIZE EVERYTHING
+              <span class="stroked-text" data-string="WE">WE</span> CAN ORGANIZE
+              EVERYTHING
             </h2>
           </div>
         </div>
@@ -434,7 +445,14 @@
           <div class="left-section">
             <ul>
               <li>
-                <h3><span class="stroked-text stroke-color-green" data-string="WATCH">WATCH</span> THE VIDEO</h3>
+                <h3>
+                  <span
+                    class="stroked-text stroke-color-green"
+                    data-string="WATCH"
+                    >WATCH</span
+                  >
+                  THE VIDEO
+                </h3>
               </li>
               <li>
                 <h3>
@@ -478,7 +496,9 @@
 
         <li>
           <div class="right-section">
-            <!-- <img src="img/video-cover.png" alt="" width="100%" /> -->
+            <a href="#">
+              <img src="img/play-btn.png" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+            </a>
           </div>
         </li>
       </ul>
@@ -503,6 +523,29 @@
         </div>
       </div>
     </footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <video controls autoplay>
+          <source src="img/Auto-video-play.mp4" type="video/mp4">
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <script src="js/vendor/jquery-3.6.1.min.js"></script>
     <script src="js/vendor/owl.carousel.min.js"></script>
