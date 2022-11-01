@@ -18,6 +18,21 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #000;
   font-weight: 700;
+  position: relative;
+}
+
+span.stroked-text::after {
+  content: attr(data-string);
+  -webkit-text-stroke: 0px;
+  -webkit-text-fill-color: #fff;
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+
+span.stroked-text.stroke-color-green::after {
+  -webkit-text-fill-color: #29554b;
+  color: #29554b;
 }
 
 /* ==========================================================================
@@ -94,8 +109,18 @@ header .cover-section {
 
 .cover-section h1 span {
   color: #fff;
+  position: relative;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #fff;
+}
+
+.cover-section h1 span::after {
+  content: attr(data-string);
+  -webkit-text-stroke: 0px;
+  -webkit-text-fill-color: #52746d;
+  position: absolute;
+  left: 0;
+  color: #52746d;
 }
 
 .cover-section p {
